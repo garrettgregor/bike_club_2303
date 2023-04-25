@@ -14,4 +14,13 @@ class Biker
   def learn_terrain!(terrain)
     @acceptable_terrain << terrain
   end
+
+  def log_ride(ride, distance_rode)
+    if @rides[ride]
+      @rides[ride] << distance_rode
+    else
+      @rides[ride] = []
+      @rides[ride] << distance_rode
+    end
+  end
 end
