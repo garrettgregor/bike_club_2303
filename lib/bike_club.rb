@@ -18,20 +18,21 @@ class BikeClub
   end
 
   def best_time(ride)
-    best_time = {}
+    best_times = {}
 
     @bikers.each do |biker|
-      best_time[biker] = biker.personal_record(ride)
-    end
-
-    best_time.min_by do |biker, personal_record|
-      if personal_record == false
-        personal_record = 100_000_000_000
+      if biker.personal_record(ride) == false
+        best_times[biker] = 100_000_000_000
+      else
+        best_times[biker] = biker.personal_record(ride)
       end
-      personal_record
-      return biker
     end
 
+    best_time = best_times.min_by do |biker, personal_record|
+      personal_record
+    end
+
+    best_time[0]
   end
 
   def bikers_eligible(ride)
