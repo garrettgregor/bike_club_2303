@@ -24,14 +24,14 @@ class BikeClub
       best_time[biker] = biker.personal_record(ride)
     end
 
-    best_time.min_by do |key, value|
-      if value == false
-        value = 100_000_000_000
+    best_time.min_by do |biker, personal_record|
+      if personal_record == false
+        personal_record = 100_000_000_000
       end
-      value
-      return key
+      personal_record
+      return biker
     end
-    
+
   end
 
 end
