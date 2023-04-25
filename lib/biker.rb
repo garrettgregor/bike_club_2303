@@ -15,12 +15,16 @@ class Biker
     @acceptable_terrain << terrain
   end
 
-  def log_ride(ride, distance_rode)
+  def log_ride(ride, time)
     if @rides[ride]
-      @rides[ride] << distance_rode
+      @rides[ride] << time
     else
       @rides[ride] = []
-      @rides[ride] << distance_rode
+      @rides[ride] << time
     end
+  end
+
+  def personal_record(ride)
+    @rides[ride].min
   end
 end
