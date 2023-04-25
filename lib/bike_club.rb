@@ -34,4 +34,10 @@ class BikeClub
 
   end
 
+  def bikers_eligible(ride)
+    @bikers.map do |biker|
+      biker if (biker.acceptable_terrain.include?(ride.terrain) && biker.max_distance >= ride.total_distance)
+    end.compact
+  end
+
 end

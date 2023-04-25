@@ -121,7 +121,7 @@ RSpec.describe BikeClub do
       bike_club.add_biker(biker2)
       bike_club.add_biker(biker3)
 
-      expect(bike_club.bikers_eligible(ride2)).to eq([biker1, biker3])
+      expect(bike_club.bikers_eligible(ride1)).to eq([biker1, biker3])
     end
   end
 end
