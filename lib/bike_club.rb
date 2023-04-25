@@ -3,7 +3,7 @@ class BikeClub
               :bikers
 
   def initialize(name)
-    @name = name
+    @name   = name
     @bikers = []
   end
 end
