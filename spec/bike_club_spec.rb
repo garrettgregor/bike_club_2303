@@ -1,3 +1,5 @@
+require "spec_helper"
+
 RSpec.describe BikeClub do
   describe "#initialize" do
     it "exists" do
