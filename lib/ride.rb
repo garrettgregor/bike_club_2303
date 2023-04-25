@@ -11,7 +11,7 @@ class Ride
     @loop = details[:loop]
   end
 
-  # def loop?
-  #   @loop
-  # end
+  def loop?
+    @loop
+  end
 end
