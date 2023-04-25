@@ -14,4 +14,12 @@ class Ride
   def loop?
     @loop
   end
+
+  def total_distance
+    if !loop?
+      @distance * 2
+    else
+      @distance
+    end
+  end
 end
