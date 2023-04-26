@@ -22,7 +22,7 @@ class BikeClub
 
     @bikers.each do |biker|
       if biker.personal_record(ride) == false
-        best_times[biker] = 100_000_000_000
+        best_times[biker] = Float::INFINITY
       else
         best_times[biker] = biker.personal_record(ride)
       end
